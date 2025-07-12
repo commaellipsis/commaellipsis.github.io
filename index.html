@@ -48,7 +48,7 @@
           <div class="card">
           <div id="post2"></div>
 <script>
-  fetch('/posts/post2.md') // Or any other markdown file
+  fetch('posts/post2.md') // Or any other markdown file
     .then(res => res.text())
     .then(md => {
       document.getElementById('post2').innerHTML = marked.parse(md);
@@ -60,7 +60,7 @@
           <div class="card">
           <div id="post1"></div>
 <script>
-  fetch('/posts/post1.md') // Or any other markdown file
+  fetch('posts/post1.md') // Or any other markdown file
     .then(res => res.text())
     .then(md => {
       document.getElementById('post1').innerHTML = marked.parse(md);
