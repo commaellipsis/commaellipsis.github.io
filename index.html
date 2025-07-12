@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+    
+    <!-- this to make markdown readable-->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.global/e0dc84d4-88b3-4ae6-9061-6af0180ddad8/Screen%20Shot%202025-04-30%20at%2011.29.52%20AM.png?v=1746037956696" />
+
+    <!--
+      This is the page head - it contains info the browser uses
+      Like the title, which appears on the browser tab but not inside the page
+      Further down you'll see the content that displays in the page
+    -->
+    <title>, , ,</title>
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!--
+      The body includes the content you see in the page
+      Each element is defined using tags, like this <div></div>
+      The attributes like class="wrapper" let us style elements in the CSS
+    -->
+
+    <div class="wrapper">
+      <div class="content" role="main">
+                  <header>
+
+        <h1>, , ,</h1>
+          <h5><a href="https://form.typeform.com/to/eFUsiopO?" target="_blank">signup</a></h5>
+        
+                    </header>
+        <hr />
+        <hr />
+        <div class="posts">
+        
+          <div class="card">
+          <div id="post2"></div>
+<script>
+  fetch('/posts/post2.md') // Or any other markdown file
+    .then(res => res.text())
+    .then(md => {
+      document.getElementById('post2').innerHTML = marked.parse(md);
+    });
+</script>
+           
+          </div>
+          <hr />
+          <div class="card">
+          <div id="post1"></div>
+<script>
+  fetch('/posts/post1.md') // Or any other markdown file
+    .then(res => res.text())
+    .then(md => {
+      document.getElementById('post1').innerHTML = marked.parse(md);
+    });
+</script>
+           
+          </div>
+        </div>
+      </div>
+      <footer>write to me at lwani@proton.me</footer>
+    </div>
+  </body>
+</html>
