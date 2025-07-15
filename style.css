@@ -15,14 +15,14 @@ to this section's matching END comment to see page-specific styles.
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: #ffffff;
+  --color-bg: #000000;
   --color-text-main: #a2add0;
   --color-text-header: #ffffff;
   --color-primary: #a2add0;
   --wrapper-height: 70vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
-
+  --main-font: "Times New Roman", Times, serif;
 }
 
 /* Basic page style resets */
