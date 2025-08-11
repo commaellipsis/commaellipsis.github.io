@@ -1,6 +1,3 @@
-title: example post
-excerpt: august poetry book club was shima by shō yamagushiku
--------------------
 # Example Post
 
 This is an example Markdown post. Add your content as Markdown in `posts/your-slug.md`.
