@@ -1,0 +1,10 @@
+posts.json example (place at repo root):
+[
+  {
+    "title": "Example Post",
+    "slug": "example-post",
+    "date": "2025-08-11",
+    "excerpt": "A short demo post to show how this works.",
+    "author": "Your Name"
+  }
+]
