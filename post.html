@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Post</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="title"><a href="/">Your Blog</a></h1>
+    </div>
+  </header>
+
+  <main class="wrap post-wrap">
+    <article id="post-article" class="post-article">
+      <!-- title, meta, and content will be injected -->
+    </article>
+  </main>
+
+  <footer class="wrap footer">
+    <p><a href="/">← back to home</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // initialize post view
+    window.addEventListener('DOMContentLoaded', () => {
+      if (document.getElementById('post-article')) {
+        loadPostFromQuery();
+      }
+    });
+  </script>
+</body>
+</html>
