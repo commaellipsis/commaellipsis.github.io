@@ -1,3 +1,6 @@
+title: 3.25.25
+excerpt: for the love of trees
+-------------------
 ### for the love of trees
 
 this weekend i watched
