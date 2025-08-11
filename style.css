@@ -1,188 +1,34 @@
-/******************************************************************************
-START Glitch hello-app default styles
-
-The styles in this section do some minimal CSS resets, set default fonts and 
-colors, and handle the layout for our footer and "Remix on Glitch" button. If
-you're new to CSS they may seem a little complicated, but you can scroll down
-to this section's matching END comment to see page-specific styles.
-******************************************************************************/
-
-/* 
-  The style rules specify elements by type and by attributes such as class and ID
-  Each section indicates an element or elements, then lists the style properties to apply
-  See if you can cross-reference the rules in this file with the elements in index.html
-*/
-
-/* Our default values set as CSS variables */
-:root {
-  --color-bg: #000000;
-  --color-text-main: #a2add0;
-  --color-text-header: #ffffff;
-  --color-primary: #a2add0;
-  --wrapper-height: 70vh;
-  --image-max-width: 300px;
-  --image-margin: 3rem;
-  --main-font: "Times New Roman", Times, serif;
+:root{
+  --bg:#fbf9f6;
+  --paper:#fffdf8;
+  --ink:#1b1b1b;
+  --muted:#6b6b6b;
+  --accent:#7a3f98;
+  --max-w:760px;
 }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height:1.6;
+}
+.wrap{max-width:var(--max-w);margin:24px auto;padding:0 18px}
+.site-header{border-bottom:1px solid rgba(0,0,0,.06);padding:18px 0}
+.title{font-family: 'Courier New', Courier, monospace;font-size:30px;margin:0}
+.tagline{margin:6px 0 0;color:var(--muted);font-size:14px}
+.posts-list .post-item{padding:18px 0;border-bottom:1px dashed rgba(0,0,0,.06)}
+.post-item h2{margin:0;font-size:20px}
+.post-item .meta{color:var(--muted);font-size:13px;margin-top:6px}
+.post-excerpt{margin-top:10px;color:var(--muted)}
+.post-article{background:var(--paper);padding:22px;border-radius:6px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.post-article h1{font-size:28px;margin-top:0}
+.post-article .meta{color:var(--muted);font-size:13px;margin-bottom:18px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.footer{color:var(--muted);font-size:13px;padding:18px 0}
 
-/* Basic page style resets */
-* {
-  box-sizing: border-box;
-}
-[hidden] {
-  display: none !important;
-}
-
-/******************************************************************************
-END Glitch hello-app default styles
-******************************************************************************/
-
-body {
-  background-color: #a2add0;
-}
-
-/* Page structure */
-.wrapper {
-  min-height: var(--wrapper-height);
-  display: block;
-  max-width: 100%;
-}
-.content {
-  display: block;
-  
-}
-
-/* Very light scaling for our illustration */
-.title {
-  color: var(--color-text-header);
-  text-align: left;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 100px;
-  line-height: 5rem;
-  margin: 0;
-}
-
-/* Very light scaling for our illustration */
-.illustration {
-  max-width: 100%;
-  max-height: var(--image-max-width);
-  margin-top: var(--image-margin);
-}
-
-/* Instructions */
-.instructions {
-  padding: 30px;
-  text-align: center;
-  color: white;
-}
-
-hr {
-  color: white;
-  border: 2px solid;
-  width: 80%;
-}
-
-header {
-  font-weight: bold;
-  margin: 13%;
-  h1 {font-size: 6rem; float: left;
-  }
-  h5{font-size: 1rem; color: white; float: right}
-}
-
-footer {
-  position: fixed; 
-  right: 0;
-  bottom: 0;
-  font-size: 1rem;
-  font-weight: bold;
-  background: #00000000;
-  text-align: right;
-  padding: 10px;
-  font-size: .75rem;}
-
-.card {
-  display: grid;
-  place-items: center;
-  padding: 30px;
-  text-align: left;
-  background-color: white;
-  width: 100%;
-  max-width: 700px;
-  border-radius: 2px;
-  box-shadow: 1px 1px 5px;
-  margin-top: 3%;
-  margin-bottom: 3%;
-float: center;  
-
-}
-.posts {
-  display: grid;
-  place-items: center;
-}
-/* Button - Add it from the README instructions */
-
-ul {
-  list-style-type: none;
-}
-
-/* Subheading */
-
-small {font-size: 0.7rem;
-line-height: 0.6;  
-}
-p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-h2 {
-  color: var(--color-text-header);
-  text-align: center;
-}
-h3 {
-  color: black;
-  line-height: .9
-}
-
-h4 {
-  color: black;
-  font-size: 0.9rem;
-}
-
-cite {
-  font-size: 0.8rem;
-  display: inline-block;
-  line-height: 1rem;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-sup {
-  font-weight: bold
-}
-
-
-/* Interactive image */
-.illustration:active {
-  transform: translateY(5px);
-}
-
-/* Button dip
-- Toggling this class on and off will move it down and up again
-- The button transition property above determines the speed of the translate (500ms)
-*/
-.dipped {
-  transform: translateY(5px);
-}
-
-/* Links that open files in the editor */
-.fileopener {
-  cursor: pointer;
-  font-weight: bold;
-  border-bottom: 3px solid var(--color-primary);
-  color: var(--color-secondary);
-}
-.fileopener:hover {
-  border-bottom: 3px solid var(--color-secondary);
-}
+/* small screens */
+@media (max-width:520px){.wrap{margin:12px auto;padding:0 12px}.title{font-size:24px}}
